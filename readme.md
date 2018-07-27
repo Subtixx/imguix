@@ -1,4 +1,4 @@
-## cocos2d-x-3.8.1 with imgui
+## cocos2d-x-3.17 with imgui
 
 1. [https://github.com/cocos2d/cocos2d-x](https://github.com/cocos2d/cocos2d-x)
 2. [https://github.com/ocornut/imgui](https://github.com/ocornut/imgui)
@@ -53,7 +53,7 @@ CCIMGUI::getInstance()->removeImGUI("demoid");
 CCIMGUI::getInstance()->imageButton("filename.png");
 
 // create button with SpriteFrameName, auto pushID / popID with texture id
-CCIMGUI:: getInstance()->imageButton("#framename");
+CCIMGUI::getInstance()->imageButton("#framename");
 
 // chinese font
 // http://www.slackware.com/~alien/slackbuilds/wqy-zenhei-font-ttf/build/wqy-zenhei-0.4.23-1.tar.gz
