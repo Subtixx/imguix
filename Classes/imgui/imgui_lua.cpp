@@ -260,8 +260,9 @@ static int imgui_combo(lua_State *L) {
     return 2;
 }
 static int imgui_colorButton(lua_State *L) {
-    ImVec4 col(luaL_checkinteger(L, 1), luaL_checkinteger(L, 2), luaL_checkinteger(L, 3), luaL_checkinteger(L, 4));
-    bool ret = ImGui::ColorButton(col);
+	const char* label = luaL_checkstring(L, 1);
+    ImVec4 col(luaL_checkinteger(L, 2), luaL_checkinteger(L, 3), luaL_checkinteger(L, 4), luaL_checkinteger(L, 5));
+    bool ret = ImGui::ColorButton(label, col);
     lua_pushboolean(L, ret);
     return 1;
 }
@@ -753,7 +754,7 @@ int luaopen_imgui(lua_State *L)
     FIELD(ImGuiWindowFlags_NoScrollWithMouse)
     FIELD(ImGuiWindowFlags_NoCollapse)
     FIELD(ImGuiWindowFlags_AlwaysAutoResize)
-    FIELD(ImGuiWindowFlags_ShowBorders)
+    //FIELD(ImGuiWindowFlags_ShowBorders)
     FIELD(ImGuiWindowFlags_NoSavedSettings)
     FIELD(ImGuiWindowFlags_NoInputs)
     FIELD(ImGuiWindowFlags_MenuBar)
